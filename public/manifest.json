@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "AsaniBiz - Mohallay Ki Dukaan Se Professional Karobaar",
+  "short_name": "AsaniBiz",
+  "description": "AI-Powered Business Office, Billing, Ledger & Inventory for Small Businesses",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0d5c3a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

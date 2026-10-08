@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function() {
+        var origError = console.error;
+        console.error = function() {
+          var firstArg = arguments[0];
+          if (typeof firstArg === 'string' && (firstArg.indexOf('[vite]') !== -1 || firstArg.indexOf('vite-plugin-pwa') !== -1)) {
+            return;
+          }
+          return origError.apply(console, arguments);
+        };
+        window.addEventListener('error', function(e) {
+          if (e && e.message && (e.message.indexOf('[vite]') !== -1 || e.message.indexOf('WebSocket') !== -1)) {
+            e.stopImmediatePropagation();
+          }
+        }, true);
+        window.addEventListener('unhandledrejection', function(e) {
+          var reasonStr = e && e.reason ? String(e.reason) : '';
+          if (reasonStr.indexOf('[vite]') !== -1 || reasonStr.indexOf('WebSocket') !== -1) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+          }
+        }, true);
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AsaniBiz — Jis karobar mein aasani hai, usmein barkat aur sukoon wasee hai</title>
+    <meta name="description" content="AsaniBiz — Jis karobar mein aasani hai, usmein barkat aur sukoon wasee hai. AsaniBiz — aapke karobar ka smart digital saathi." />
+    <meta property="og:title" content="AsaniBiz — Jis karobar mein aasani hai, usmein barkat aur sukoon wasee hai" />
+    <meta property="og:description" content="AsaniBiz — Jis karobar mein aasani hai, usmein barkat aur sukoon wasee hai. AsaniBiz — aapke karobar ka smart digital saathi." />
+    <meta property="og:image" content="/asanibiz_vip_logo.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/asanibiz_vip_logo.jpg" />
+    <meta name="theme-color" content="#0d5c3a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="AsaniBiz" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/jpeg" href="/asanibiz_vip_logo.jpg" />
+    <link rel="apple-touch-icon" href="/asanibiz_vip_logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-emerald-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

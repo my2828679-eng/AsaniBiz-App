@@ -1,0 +1,11 @@
+{
+  "name": "AsaniBiz",
+  "description": "Jis karobar mein aasani hai, usmein barkat aur sukoon wasee hai. AsaniBiz — aapke karobar ka smart digital saathi.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

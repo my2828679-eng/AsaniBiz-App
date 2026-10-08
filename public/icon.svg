@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a462b" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="whiteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <!-- Storefront awning roof motif -->
+  <path d="M120 190 L256 120 L392 190 L392 220 L120 220 Z" fill="url(#goldGrad)" />
+  <!-- Storefront columns / A frame -->
+  <path d="M150 240 L210 240 L256 160 L302 240 L362 240 L286 110 C272 88 240 88 226 110 Z" fill="url(#whiteGrad)" />
+  <!-- Lower crossbar and shop counter -->
+  <rect x="156" y="270" width="200" height="28" rx="8" fill="url(#goldGrad)" />
+  <!-- Growth chart line and AI node -->
+  <path d="M170 370 L230 330 L280 350 L342 290" fill="none" stroke="#34d399" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="342" cy="290" r="14" fill="#fbbf24" />
+  <!-- Urdu letter Ain / Asani curve subtle motif -->
+  <circle cx="256" cy="400" r="32" fill="none" stroke="url(#whiteGrad)" stroke-width="12" stroke-dasharray="140 60" />
+</svg>
